@@ -105,6 +105,7 @@ router.route('/:id')
       wis_mod: abilityMod(+characteristic.wis),
       int_mod: abilityMod(+characteristic.int),
       cha_mod: abilityMod(+characteristic.cha),
+      pas_wis: abilityMod(+characteristic.wis) + 10
     }
     
 
