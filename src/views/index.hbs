@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="/css/index.css">
+<main>
+<h1>Welcome, {{name}}</h1>
+  <section >
+    <article><h1>Character table</h1>
+    <ul id='sheets'>
+
+      <li>
+        <a href="sheet/new">Create new</a>
+      </li>
+      <br>
+      {{#if userSheets}}
+        {{#each userSheets}}
+        <li >
+        
+        <a href="/sheet/{{this.id}}">{{this.name}}</a>
+        </li>
+      {{/each}}
+      {{else}}
+      <li>  No sheets yet </li>
+      {{/if}}
+
+    </ul>
+    </article>
+    <article><h1>Rules</h1>
+      <ul>
+        {{#each rules}}
+          <li>
+            <a href='/rules/{{this.index}}'>
+              {{this.name}} 
+            </a>
+          </li>
+        {{/each}}
+      </ul>
+    </article>
+  </section>
+</main>

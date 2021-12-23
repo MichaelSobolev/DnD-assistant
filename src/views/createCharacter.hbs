@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="/css/sheetFiller.css">
+  <script defer src="/js/createCharacter.js"></script>
+<main>
+  <section>
+    <h1>Choose race</h1>
+    <form id='race'>
+      <select name="race" id="race_select">
+          <option value="" disabled selected>Please choose the race</option>
+
+        {{#each raceList}}
+          <option value='{{this.index}}'>{{this.name}}</option>
+        {{/each}}
+      </select>
+    </form>
+    <article id='race-desc'>
+
+    </article>
+  </section>
+  <section>
+    <h1>Choose class</h1>
+    <form id="class">
+      <select name="class" id="class-select">
+        {{#each classList}}
+          <option value='{{this.index}}'>{{this.name}} 1</option>
+        {{/each}}
+      </select>
+    </form>
+    <article id='class-desc'>
+
+    </article>
+  </section>
+</main>
+
+
+
+
+  
+  
