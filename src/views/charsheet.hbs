@@ -6,7 +6,6 @@
   <div class="buttons">
     <button type="submit" class="btn save_btn" form="character-sheet"></button>
     <button class="btn edit_btn" id="unblock"></button>
-
   </div>
   <form
     class="charsheet form"
@@ -207,7 +206,12 @@
                     type="text"
                     value="{{modificators.str_mod}}"
                     id="STRmod"
-                  /><input name="Strength-save-prof" type="checkbox" id="STR" />
+                  /><input
+                    name="Strength-save-prof"
+                    type="checkbox"
+                    value="on"
+                    id="STR"
+                  />
                 </li>
                 <li>
                   <label for="Dexterity-save">Dexterity</label><input
@@ -444,7 +448,7 @@
           <div class="label-container">
             <label for="passiveperception">Passive Wisdom (Perception)</label>
           </div>
-          <input name="passiveperception" placeholder="10" />
+          <input name="passiveperception" id="passive-wisdom" placeholder="10" value={{modificators.pas_wis}} />
         </div>
         <div class="otherprofs box textblock">
           <label for="otherprofs">Other Proficiencies and Languages</label><textarea
@@ -504,7 +508,7 @@
               <label for="temphp">Temporary Hit Points</label><input
                 class="active-field"
                 name="temphp"
-                type="text"
+                type="number"
               />
             </div>
           </div>
@@ -521,7 +525,7 @@
                 <label for="remaininghd">Hit Dice</label><input
                   class="active-field"
                   name="remaininghd"
-                  type="text"
+                  type="number"
                 />
               </div>
             </div>
@@ -664,6 +668,7 @@
               </ul>
             </div>
             <textarea
+              name="inventory"
               class="inventory"
               placeholder="Equipment list here"
             ></textarea>

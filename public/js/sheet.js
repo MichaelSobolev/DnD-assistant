@@ -1,12 +1,25 @@
 
-// var form = document.querySelector('form');
-// form.addEventListener('change', function (e) {
-//   e.preventDefault()
-//   const formData = new FormData(form);
-//   const value = formData.get('name');
+var form = document.querySelector('form');
+form.addEventListener('change', function (e) {
+  e.preventDefault()
+  const formData = new FormData(form);
+  const currentHp = formData.get('currenthp');
+  const tempHp = formData.get('temphp');
+  const reamingingHitDice = formData.get('remaininghd');
+  const platina = formData.get('pp');
+  const gold = formData.get('gp');
+  const electrum = formData.get('ep');
+  const silver = formData.get('sp');
+  const copper = formData.get('cp');
+  const inventory = formData.get('inventory');
+  const deathSaveSucces = formData.get('death_succes');
+  const deathSaveFail = formData.get('death_fail');
+  const experience = formData.get('experiencepoints');
 
-//   alert(`Hi! ${value}`);
-// });
+  const value = formData.get('inventory');
+
+  alert(`Hi! experience ${experience}, deathSaveSucces ${deathSaveSucces}, deathSaveFail ${deathSaveFail}`);
+});
 
 
 
@@ -117,6 +130,5 @@ const editBtn = document.querySelector('#unblock')
 editBtn.addEventListener('click', () => {
   editBtn.disabled = true
   inputs.forEach(el => el.disabled = false)
-
   console.log('123')
 })
