@@ -1,0 +1,63 @@
+@import "config";
+@import "auth";
+@import "main_menu";
+
+body {
+  display: flex;
+  flex-direction: column;
+  background: $primary-color;
+  color: $text-color;
+  height: 100vh;
+  line-height: 1;
+  font-family: "Kanit", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  .auth-main {
+  }
+}
+
+a {
+  @include steady-transition;
+  color: $text-color;
+  text-decoration: none;
+  &:hover {
+    color: $accent-color;
+  }
+}
+
+.menu-nav {
+  display: flex;
+  li {
+    padding-right: 3vw;
+    list-style: none;
+    a {
+      font-weight: 500;
+      &:hover {
+        font-weight: 700;
+      }
+    }
+  }
+}
+footer {
+  font-size: 1rem;
+  position: fixed;
+  bottom: 0.4rem;
+  right: 1rem;
+  text-align: right;
+  padding: 1rem;
+  color: $text-color;
+}
+
+#logo {
+  max-height: 55px;
+}

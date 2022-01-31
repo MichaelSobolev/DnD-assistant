@@ -8,13 +8,17 @@ const loginAuth = require('../middlewares/login');
 
 router.get('/', loginAuth, async (req, res) => {
   let rules = (await dndApi('https://www.dnd5eapi.co/api/rule-sections/')).results
-  const userSheets = await Sheet.findAll({
-    where: {
-      user_id: req.session.userId
-    },
-    raw: true,
-  })
-  res.render('index', { rules, userSheets })
+  try {
+    const userSheets = await Sheet.findAll({
+      where: {
+        user_id: req.session.userId
+      },
+      raw: true,
+    })
+    res.render('index', { rules, userSheets })
+  } catch (err) {
+    res.render('login')
+  }
   // res.render('index', { rules })
 
 });

@@ -1,23 +1,22 @@
-main{
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
   /* justify-items: center; */
 }
 
-section{
+section {
   display: flex;
   flex-direction: row;
   width: 100%;
-  justify-content:space-around;
+  justify-content: space-around;
   /* align-items: flex-end; */
 }
 
-article{
+article {
   text-align: center;
 }
-ul
-{
+ul {
   margin-left: 0;
   padding-left: 0;
   display: flex;
@@ -26,18 +25,16 @@ ul
   align-items: center;
 }
 
-li
-{
+li {
   display: inline;
 }
 
-li > a{
+li > a {
   color: #6b705c;
   text-decoration: none;
   text-transform: uppercase;
 }
 
-li > a:hover{
+li > a:hover {
   text-decoration: underline;
 }
-

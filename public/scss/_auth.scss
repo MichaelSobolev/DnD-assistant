@@ -1,0 +1,59 @@
+.auth {
+  height: 100%;
+  padding-top: 20vh;
+  &__form {
+    display: flex;
+    color: $primary-color;
+    flex-direction: column;
+    background: $secondary-color;
+    width: 55vw;
+    padding: 5vw;
+    margin-left: 20vw;
+    border-radius: 5%;
+    input,
+    h1 {
+      margin-bottom: 1rem;
+    }
+    h1 {
+      @include steady-transition;
+      text-align: center;
+      color: lighten($accent-color, 15);
+      &:hover {
+        color: $accent-color;
+        transform: scale(1.1, 1.1);
+      }
+    }
+    &__input {
+      margin-top: 0.2rem;
+      border: none;
+      color: $secondary-color;
+      background: $primary-color;
+      padding: 1.5vh;
+      border-radius: 3px;
+      font-size: 1.2rem;
+    }
+    .btn {
+      background: $primary-color;
+      border: none;
+      color: $secondary-color;
+      font-size: 20px;
+      font-weight: bolder;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      &:hover {
+        @include steady-transition;
+        color: $accent-color;
+        border-inline: 1rem solid $accent-color;
+      }
+    }
+  }
+}
+
+.error-box {
+  color: red;
+  text-align: center;
+  font-weight: 600;
+  background: $primary-color;
+}

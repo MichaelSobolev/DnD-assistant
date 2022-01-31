@@ -11,7 +11,7 @@ const fileUpload = require('express-fileupload');
 const FileStore = require('session-file-store')(session);
 require('dotenv').config();
 const CreateError = require('http-errors');
-
+process.env.PWD = process.cwd();
 // ------------------------- //
 // Connect routers
 const indexRouter = require('./src/routes/index.router');
@@ -29,6 +29,7 @@ const PORT = process.env.PORT || 3001;
 // Express setting
 // HBS
 app.set('view engine', 'hbs');
+console.log(process.env.PWD)
 app.set('views', path.join(process.env.PWD, 'src', 'views'));
 // Cors
 app.use(cors());

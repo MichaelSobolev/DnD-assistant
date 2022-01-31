@@ -4,27 +4,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>D&D assistant</title>
+    <link rel="icon" href="/img/dnd.png">
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
-    <nav>
+    <header>
       <img id="logo" src="/img/dnd.png" alt="Logo" />
-      <div>
-        {{#if userId}}
-          <a href="/">Home</a>
-          <a href="/user/logout"> Logout</a>
-        {{else}}
-          <a id="nav-auth" href="/user/login">Authentication</a>
-          <a id="nav-reg" href="/user/registration">Registration</a>
-        {{/if}}
-      </div>
+      <nav class="nav">
+        <ul class="menu-nav">
+          {{#if userId}}
+          <li class="menu-nav__item">
+            <a href="/" class="menu-nav__link">Home</a>
+          </li>
+          <li class="menu-nav__item">
+            <a href="/user/logout" class="menu-nav__link">Logout</a>
+          </li>
+              {{else}}
 
-    </nav>
+          <li class="menu-nav__item">
+            <a href="/user/login" class="menu-nav__link">Authentication</a>
+          </li>
+          <li class="menu-nav__item">
+            <a href="/user/registration" class="menu-nav__link">Registration</a>
+            {{/if}}
+          </li>
+        </ul>
+      </nav>
+    </header>
     {{{body}}}
-
-  </body>
   <footer>
-    <hr />
-
+    footer
   </footer>
+  </body>
 </html>

@@ -1,0 +1,16 @@
+.main-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .content {
+    margin-top: 5vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    h2 {
+      text-decoration: underline;
+      
+    }
+  }
+}

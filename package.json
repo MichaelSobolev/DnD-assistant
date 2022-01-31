@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js",
+    "sass": "node-sass -w public/scss/ -o public/css/ --recursive",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "nodemonConfig": {
@@ -35,6 +36,7 @@
     "marked": "^4.0.5",
     "morgan": "^1.10.0",
     "node-json2html": "^2.2.0",
+    "node-sass": "^7.0.1",
     "pg": "^8.7.1",
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.12.0-alpha.1",
