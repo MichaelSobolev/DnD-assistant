@@ -23,12 +23,11 @@ header {
 main {
   height: 100%;
   width: 100%;
-  .auth-main {
-  }
 }
 
 a {
   @include steady-transition;
+  font-size: 1.6rem;
   color: $text-color;
   text-decoration: none;
   &:hover {
