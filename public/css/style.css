@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&family=Kanit:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -67,6 +68,38 @@
     justify-content: space-around; }
     .main-menu .content h2 {
       text-decoration: underline; }
+
+.articles {
+  font-family: "Merriweather", serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 185%; }
+  .articles * {
+    max-width: 80%; }
+  .articles h1,
+  .articles h2,
+  .articles h3,
+  .articles h4 {
+    margin-top: 2rem;
+    margin-left: 1rem; }
+  .articles p {
+    text-indent: 15px; }
+  .articles ul {
+    margin-left: 3rem;
+    line-height: 125%; }
+  .articles table {
+    border-collapse: collapse;
+    min-width: 15%;
+    border-radius: 5%;
+    background-color: #f1efe1;
+    text-align: center; }
+    .articles table tbody tr:nth-child(2n-1) {
+      background-color: #c5cf92; }
+  .articles table,
+  .articles th,
+  .articles td {
+    border: 1px solid #857671; }
 
 body {
   display: flex;

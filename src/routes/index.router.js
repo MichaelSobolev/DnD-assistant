@@ -1,6 +1,5 @@
 const express = require('express');
 const dndApi = require('../api/dndApi')
-const marked = require('marked');
 const { Sheet } = require('../db/models')
 
 const router = express.Router();
@@ -19,13 +18,8 @@ router.get('/', loginAuth, async (req, res) => {
   } catch (err) {
     res.render('login')
   }
-  // res.render('index', { rules })
-
 });
 
-router.get('/test', loginAuth, async (req, res) => {
-  res.render('index', { rules })
-});
 
 
 module.exports = router;
