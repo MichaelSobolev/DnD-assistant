@@ -59,15 +59,53 @@
 .main-menu {
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  width: 100%; }
+  .main-menu * {
+    margin: 0.5rem;
+    flex: 1;
+    border-radius: 5px; }
+  .main-menu h1 {
+    flex: 0;
+    text-align: center; }
+  .main-menu h2 {
+    text-align: center; }
+  .main-menu .last-sheet {
+    flex: 1;
+    text-align: center;
+    border: 3px solid #857671;
+    color: red;
+    font-weight: 900;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url("../img/charsheet.jpg") center top;
+    background-size: cover; }
+    .main-menu .last-sheet:hover {
+      border: 3px solid #ff6d24; }
   .main-menu .content {
-    margin-top: 5vh;
-    width: 100%;
+    border: 3px solid #857671;
+    flex: 4;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around; }
-    .main-menu .content h2 {
-      text-decoration: underline; }
+    background: #857671; }
+    .main-menu .content * {
+      background: #d8d2c4; }
+  .main-menu .sheets {
+    flex-grow: 1;
+    text-align: center; }
+    .main-menu .sheets li {
+      list-style-type: none; }
+  .main-menu .rules {
+    font-size: 25;
+    display: flex;
+    flex-direction: column;
+    flex: 3; }
+    .main-menu .rules h2 {
+      flex: 0; }
+    .main-menu .rules ul {
+      flex: 4;
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+      white-space: nowrap; }
+    .main-menu .rules li {
+      list-style-type: none; }
 
 .articles {
   font-family: "Merriweather", serif;

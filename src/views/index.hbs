@@ -1,9 +1,12 @@
 <main class="main-menu">
   <h1>Welcome, {{name}}</h1>
+  <section class="last-sheet">
+    Последняя таблица
+  </section>
   <section class="content">
-    <article><h2>Character table</h2>
+    <section class="sheets">
+      <h2>Character tables</h2>
       <ul id="sheets">
-
         <li>
           <a href="sheet/new">Create new</a>
         </li>
@@ -18,10 +21,11 @@
         {{else}}
           <li> No sheets yet </li>
         {{/if}}
-
       </ul>
-    </article>
-    <article><h2>Rules</h2>
+    </section>
+    <section class="rules">
+
+      <h2>Rules</h2>
       <ul>
         {{#each rules}}
           <li>
@@ -31,6 +35,7 @@
           </li>
         {{/each}}
       </ul>
-    </article>
+    </section>
   </section>
+
 </main>

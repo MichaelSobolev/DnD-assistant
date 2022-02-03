@@ -1,16 +1,77 @@
 .main-menu {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 100%;
+  * {
+    margin: 0.5rem;
+    flex: 1;
+    border-radius: 5px;
+  }
+  h1 {
+    flex: 0;
+    text-align: center;
+  }
+  h2 {
+    text-align: center;
+  }
+  // .content {
+  //   margin-top: 5vh;
+  //   width: 100%;
+  //   display: flex;
+  //   flex-direction: row;
+  //   justify-content: space-around;
+  //   h2 {
+  //     text-decoration: underline;
+  //   }
+  // }
+  .last-sheet {
+    flex: 1;
+    text-align: center;
+    border: 3px solid $secondary-color;
+    color: red;
+    font-weight: 900;
+    // min-height: 10%;
+    background: linear-gradient(to right, rgba(black, 0.2), rgba(black, 0.3)),
+      url("../img/charsheet.jpg") center top;
+    background-size: cover;
+    &:hover {
+      border: 3px solid $accent-color;
+    }
+  }
   .content {
-    margin-top: 5vh;
-    width: 100%;
+    border: 3px solid $secondary-color;
+
+    flex: 4;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    background: $secondary-color;
+    * {
+      background: darken($primary-color, 5);
+    }
+  }
+  .sheets {
+    flex-grow: 1;
+    text-align: center;
+    li {
+      list-style-type: none;
+    }
+  }
+  .rules {
+    font-size: 25;
+    display: flex;
+    flex-direction: column;
+    flex: 3;
     h2 {
-      text-decoration: underline;
-      
+      flex: 0;
+    }
+    ul {
+      flex: 4;
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+      white-space: nowrap;
+    }
+    li {
+      list-style-type: none;
     }
   }
 }
