@@ -66,6 +66,7 @@
     text-align: center;
     max-height: 2rem; }
   .main-menu .last-sheet {
+    text-align: center;
     grid-column: span 4;
     grid-row: 2;
     border: 3px solid #857671; }

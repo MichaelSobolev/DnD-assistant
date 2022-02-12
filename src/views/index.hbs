@@ -1,7 +1,21 @@
 <main class="main-menu">
   <h1>Welcome, <span class="accent-color">{{name}}</span></h1>
   <section class="last-sheet">
-    Последняя таблица
+    Последняя таблица:
+    {{lastSheet.name}}
+    {{lastSheet.race}}
+    {{lastSheet.class}}
+    <div>ID:
+      {{lastSheet.id}}
+    </div>
+    <div>
+      createdAt:
+      {{lastSheet.createdAt}}
+    </div>
+    <div>
+      updatedAt:
+      {{lastSheet.updatedAt}}
+    </div>
   </section>
   <section class="content">
     <section class="sheets">
