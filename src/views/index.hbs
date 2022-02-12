@@ -1,16 +1,15 @@
 <main class="main-menu">
-  <h1>Welcome, {{name}}</h1>
+  <h1>Welcome, <span class="accent-color">{{name}}</span></h1>
   <section class="last-sheet">
     Последняя таблица
   </section>
   <section class="content">
     <section class="sheets">
       <h2>Character tables</h2>
-      <ul id="sheets">
+      <ul class="sheets__list">
         <li>
           <a href="sheet/new">Create new</a>
         </li>
-        <br />
         {{#if userSheets}}
           {{#each userSheets}}
             <li>
@@ -24,9 +23,8 @@
       </ul>
     </section>
     <section class="rules">
-
       <h2>Rules</h2>
-      <ul>
+      <ul class="rules__list">
         {{#each rules}}
           <li>
             <a href="/rules/{{this.index}}">

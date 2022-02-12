@@ -1,77 +1,152 @@
+// .main-menu {
+//   display: flex;
+//   flex-direction: column;
+//   width: 100%;
+//   * {
+//     margin: 0.5rem;
+//     flex: 1;
+//     border-radius: 5px;
+//   }
+//   h1 {
+//     flex: 0;
+//     text-align: center;
+//   }
+//   h2 {
+//     text-align: center;
+//   }
+//   // .content {
+//   //   margin-top: 5vh;
+//   //   width: 100%;
+//   //   display: flex;
+//   //   flex-direction: row;
+//   //   justify-content: space-around;
+//   //   h2 {
+//   //     text-decoration: underline;
+//   //   }
+//   // }
+//   .last-sheet {
+//     flex: 1;
+//     text-align: center;
+//     border: 3px solid $secondary-color;
+//     color: red;
+//     font-weight: 900;
+//     // min-height: 10%;
+//     background: linear-gradient(to right, rgba(black, 0.2), rgba(black, 0.3)),
+//       url("../img/charsheet.jpg") center top;
+//     background-size: cover;
+//     &:hover {
+//       border: 3px solid $accent-color;
+//     }
+//   }
+//   .content {
+//     border: 3px solid $secondary-color;
+
+//     flex: 4;
+//     display: flex;
+//     background: $secondary-color;
+//     * {
+//       background: darken($primary-color, 5);
+//     }
+//   }
+//   .sheets {
+//     flex-grow: 1;
+//     text-align: center;
+//     li {
+//       list-style-type: none;
+//     }
+//   }
+//   .rules {
+//     font-size: 25;
+//     display: flex;
+//     flex-direction: column;
+//     flex: 3;
+//     h2 {
+//       flex: 0;
+//     }
+//     ul {
+//       flex: 4;
+//       display: flex;
+//       flex-wrap: wrap;
+//       text-align: center;
+//       white-space: nowrap;
+//     }
+//     li {
+//       list-style-type: none;
+//     }
+//   }
+// }
+
 .main-menu {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  * {
-    margin: 0.5rem;
-    flex: 1;
-    border-radius: 5px;
-  }
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 5rem;
   h1 {
-    flex: 0;
+    grid-column: 2 / span 2;
     text-align: center;
+    max-height: 2rem;
   }
-  h2 {
-    text-align: center;
-  }
-  // .content {
-  //   margin-top: 5vh;
-  //   width: 100%;
-  //   display: flex;
-  //   flex-direction: row;
-  //   justify-content: space-around;
-  //   h2 {
-  //     text-decoration: underline;
-  //   }
-  // }
   .last-sheet {
-    flex: 1;
-    text-align: center;
+    grid-column: span 4;
+    grid-row: 2;
     border: 3px solid $secondary-color;
-    color: red;
-    font-weight: 900;
-    // min-height: 10%;
-    background: linear-gradient(to right, rgba(black, 0.2), rgba(black, 0.3)),
-      url("../img/charsheet.jpg") center top;
-    background-size: cover;
     &:hover {
+      background: linear-gradient(
+        to right,
+        rgba($accent-color, 0.9),
+        rgba(black, 0.3)
+      );
       border: 3px solid $accent-color;
     }
   }
   .content {
-    border: 3px solid $secondary-color;
-
-    flex: 4;
-    display: flex;
-    background: $secondary-color;
-    * {
-      background: darken($primary-color, 5);
-    }
-  }
-  .sheets {
-    flex-grow: 1;
+    grid-column: span 4;
+    grid-row: 3;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(5, 1fr);
     text-align: center;
-    li {
-      list-style-type: none;
+    .sheets,
+    .rules {
+      display: grid;
+      border: 3px solid $secondary-color;
+      grid-template-rows: 3rem;
+      &__list {
+        display: grid;
+        li {
+          list-style-type: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          &:hover {
+            @include steady-transition;
+            color: $accent-color;
+            border-inline: 0.25rem solid $accent-color;
+            background: linear-gradient(
+              to right,
+              rgba($accent-color, 0.2),
+              rgba(black, 0)
+            );
+          }
+        }
+      }
     }
-  }
-  .rules {
-    font-size: 25;
-    display: flex;
-    flex-direction: column;
-    flex: 3;
-    h2 {
-      flex: 0;
+
+    .sheets {
+      grid-column: span 2;
     }
-    ul {
-      flex: 4;
-      display: flex;
-      flex-wrap: wrap;
-      text-align: center;
-      white-space: nowrap;
-    }
-    li {
-      list-style-type: none;
+    .rules {
+      grid-column: 3 / span 3;
+      grid-template-columns: repeat(5, 1fr);
+      h2 {
+        grid-column: 2 / span 3;
+      }
+      &__list {
+        grid-template-columns: 1fr 1fr;
+
+        grid-row: 2;
+        grid-column: span 5;
+      }
     }
   }
 }
