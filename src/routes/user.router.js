@@ -15,8 +15,7 @@ router.route('/login')
         res.status(500).json({ message: `Error: User ${email} is not found!` });
       } else if ((await bcrypt.compare(password, userInfo.password))) {
         req.session.userId = userInfo.id;
-        req.session.name = userInfo.nickname;
-
+        req.session.userName = userInfo.nickname;
         res.sendStatus(200);
       } else {
         res.status(500).json({ message: 'Error: Wrong password!' });
@@ -34,7 +33,7 @@ router.route('/registration')
   .post(async (req, res) => {
     const { email, password, name } = req.body;
     try {
-      
+
       const userInfo = await User.findOne({ where: { email }, raw: true });
       console.log(userInfo)
       if (userInfo) {

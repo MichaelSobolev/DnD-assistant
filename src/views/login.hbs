@@ -1,23 +1,28 @@
-    <script defer src="/js/auth.js"></script>
+<script defer src="/js/auth.js"></script>
 
-
-    
-  <main class="auth-main">
-    
-  <form id='login-form' class="auth-form">
-    <h2>Authorization</h2>
+<main class="auth">
+  <form id="login-form" class="auth__form">
+    <h1>Authorization</h1>
     <div class="error-box">
-    
     </div>
-    <br>
+    <br />
     <label for="email"> Email: </label>
-    
-    <input name='email' id='email'type="email" placeholder="Email">
-    
-    <label for= "passwod "> Password:</label>
-    
-    <input id='password' name='password' type="password" placeholder="Password">
-    
-    <input class='btn' type="button" id='btn' value="sign in">
+    <input
+      name="email"
+      id="email"
+      type="email"
+      placeholder="Email"
+      class="auth__form__input"
+    />
+    <label for="passwod "> Password:</label>
+    <input
+      id="password"
+      name="password"
+      type="password"
+      placeholder="Password"
+      class="auth__form__input"
+    />
+
+    <input class="btn" type="button" id="btn" value="sign in" />
   </form>
-  </main>
+</main>

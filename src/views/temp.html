@@ -1,0 +1,13 @@
+<!-- Old navbar -->
+<nav>
+  <img id="logo" src="/img/dnd.png" alt="Logo" />
+  <div>
+    {{#if userId}}
+      <a href="/">Home</a>
+      <a href="/user/logout"> Logout</a>
+    {{else}}
+      <a id="nav-auth" href="/user/login">Authentication</a>
+      <a id="nav-reg" href="/user/registration">Registration</a>
+    {{/if}}
+  </div>
+</nav>
